@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-model]').forEach(link => {link.href = 'https://wa.me/905400015740?text=' + encodeURIComponent('Merhaba, “' + link.dataset.model + '” uygulaması hakkında bilgi almak istiyorum.');});
