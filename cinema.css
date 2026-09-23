@@ -8,3 +8,11 @@
 .cinema-media{min-height:0;padding:0;margin:22px 0 0;display:block}.cinema-media video{width:100%;height:auto;aspect-ratio:1100/720;object-fit:contain}.cinema-media:after{display:none}.film-bottom{position:static;margin:17px 0 25px}.cinema-footer{padding:18px 20px;line-height:1.8;font-size:11px;letter-spacing:.5px}
 }
 @media(max-width:380px){.cinema-brand{font-size:18px}.cinema-header nav{gap:12px}.cinema-header nav a{font-size:13px}.cinema-header,.cinema-main,.cinema-footer{padding-left:16px;padding-right:16px}}
+
+/* Replay the heading after navigation and mobile page restoration. */
+.word-line>span{animation:none}
+.heading-ready .word-line>span{animation:word-reveal 1.4s cubic-bezier(.2,.75,.2,1) both}
+.heading-ready .word-line:nth-child(2)>span{animation-delay:.22s}
+.heading-ready .word-line:nth-child(3)>span{animation-delay:.44s}
+@keyframes gentle-reveal{from{opacity:.35}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.heading-ready .word-line>span{animation-name:gentle-reveal;animation-duration:.8s}}
